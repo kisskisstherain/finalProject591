@@ -77,7 +77,15 @@ public class FEARSAnalysis {
 	
 	if(drugByID.containsKey(key)) 
 	{
+	    HashMap<Drug, Drug> filterOutSameDrugInOneCase = new HashMap<Drug, Drug>();
 	    for(Drug drug : drugByID.get(key)) 
+	    {
+		if(!filterOutSameDrugInOneCase.containsKey(drug)) 
+		{
+		    filterOutSameDrugInOneCase.put(drug, drug);
+		}
+	    }
+	    for(Drug drug : filterOutSameDrugInOneCase.keySet()) 
 	    {
 		if(adverseEventByDrug.containsKey(drug))
 		{
