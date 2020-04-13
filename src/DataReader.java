@@ -66,11 +66,11 @@ public class DataReader {
 		ArrayList<String> outcomeData = new ArrayList<String>(Files.readAllLines(outcomeFile));
 		outcomeData.remove(0);
 
-		Path drugFile = Paths.get("DRUG19Q4.txt");
+		Path drugFile = Paths.get("DRUG19Q4small2.txt");
 		ArrayList<String> drugData = new ArrayList<String>(Files.readAllLines(drugFile));
 		drugData.remove(0);
 
-		Path eventsFile = Paths.get("REAC19Q4.txt");
+		Path eventsFile = Paths.get("REAC19Q4small2.txt");
 		ArrayList<String> reacData = new ArrayList<String>(Files.readAllLines(eventsFile));
 		reacData.remove(0);
 
@@ -89,8 +89,8 @@ public class DataReader {
 			String name = processEmptyString(lineComp[4]);
 			String ai = processEmptyString(lineComp[5]);
 			String route = processEmptyString(lineComp[7]);
-			String dose = processEmptyString(lineComp[9]);
-			String unit = processEmptyString(lineComp[10]);
+			String dose = processEmptyString(lineComp[16]);
+			String unit = processEmptyString(lineComp[17]);
 			String form = processEmptyString(lineComp[18]);
 			String freq = processEmptyString(lineComp[19]);
 		//added by WC

@@ -145,9 +145,9 @@ public class FEARSAnalysis {
 
 	}
     
-    public ArrayList<String> calculateTopNAEforEachDrug(int N, String drugName){
+    public ArrayList<String> calculateTopNAEforEachDrug(int N, String drugName, String dose){
 
-	Drug d = new Drug(drugName);
+	Drug d = new Drug(drugName, dose);
 	//Drug d2 = new Drug("4", "SS",drugName, "ATORVASTATIN CALCIUM", "Oral", "-1", "-1", "FILM-COATED TABLET", "-1");
 	ArrayList<String> topAEList = new ArrayList<String>();
 	HashMap<String, Integer> ha = new HashMap<String, Integer>();

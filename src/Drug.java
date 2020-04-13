@@ -12,9 +12,10 @@ public class Drug {
 	private String freq;
 	
 
-	public Drug(String drugName)
+	public Drug(String drugName, String cumDose)
 	{
 	    this.drugName = drugName;
+	    this.cumDose = cumDose;
 	}
 	
 	public Drug(String drugSeq, String role, String drugName, String activeIngredient, String route,
@@ -37,7 +38,7 @@ public class Drug {
 	    final int prime = 31;
 	    int result = 1;
 	    result = prime * result + ((this.drugName == null) ? 0 : this.drugName.hashCode());
-	    //result = prime * result + this.cumDose;
+	    result = prime * result + this.cumDose.hashCode();
 	    return result;
 	}
 	
@@ -50,7 +51,7 @@ public class Drug {
 	    if (getClass() != obj.getClass())
 	        return false;
 	    Drug other = (Drug) obj;
-	    return this.drugName.equals(other.drugName);//(this.drugName == other.drugName);
+	    return (this.drugName.equals(other.drugName) && this.cumDose.equals(other.cumDose));//(this.drugName == other.drugName);
 	}
 
 	public String getDrugSeq() {

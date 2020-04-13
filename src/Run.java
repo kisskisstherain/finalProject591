@@ -26,6 +26,6 @@ public class Run {
 	
 	*/
 	//print top 5 adverse events for "DHEA"
-	System.out.println(analysis.calculateTopNAEforEachDrug(30, "LIPITOR"));
+	System.out.println(analysis.calculateTopNAEforEachDrug(30, "LIPITOR", "80"));
 }
 }
