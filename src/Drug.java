@@ -53,6 +53,12 @@ public class Drug {
 	    Drug other = (Drug) obj;
 	    return (this.drugName.equals(other.drugName) && this.cumDose.equals(other.cumDose));//(this.drugName == other.drugName);
 	}
+	
+	
+
+	public void setCumDose(String cumDose) {
+		this.cumDose = cumDose;
+	}
 
 	public String getDrugSeq() {
 		return drugSeq;
